@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c89553b1-e2a0-4cbd-8873-fb4b70d490e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[slug]/menu/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[slug]/menu/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/get-restaurant-by-slug.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/get-restaurant-by-slug.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1763215614570</updated>
       <workItem from="1763215617245" duration="1640000" />
-      <workItem from="1763217610270" duration="8051000" />
+      <workItem from="1763217610270" duration="11259000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import getRestaurantBySlug from "@/data/get-restaurant-by-slug";
 import RestaurantHeader from "@/components/restaurant-header";
+import Categories from "@/components/categories";
 
 interface MenuPageProps {
     params: Promise<{ slug: string }>
@@ -28,6 +29,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
     return (
         <div>
             <RestaurantHeader restaurant={restaurant} />
+            <Categories restaurant={restaurant} />
         </div>
     );
 }
