@@ -1,6 +1,6 @@
 import db from "@/lib/prisma";
 
-export default async function getRestaurantBySlug(slug: string) {
+export async function getRestaurantBySlug(slug: string) {
     return db.restaurant.findUnique({
         where: {slug},
         include: {
@@ -8,5 +8,11 @@ export default async function getRestaurantBySlug(slug: string) {
                 include: { products: true }
             }
         }
+    });
+}
+
+export async function getProductById(id: string) {
+    return db.product.findUnique({
+        where: {id}
     });
 }

@@ -4,7 +4,7 @@ import TakeAwaySVG from "@/assets/take-away.svg";
 import DineInSVG from "@/assets/dine-in.svg";
 import { notFound } from "next/navigation";
 import OrderMethodOption from "@/components/consumption-method-option";
-import getRestaurantBySlug from "@/data/get-restaurant-by-slug";
+import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug";
 
 interface RestaurantProps {
     params: Promise<{ slug: string }>

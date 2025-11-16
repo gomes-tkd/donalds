@@ -1,6 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import getRestaurantBySlug from "@/data/get-restaurant-by-slug";
+import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug";
 import RestaurantHeader from "@/components/restaurant-header";
 import Categories from "@/components/categories";
 
