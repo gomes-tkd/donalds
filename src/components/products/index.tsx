@@ -2,6 +2,7 @@ import { Product } from "@prisma/client";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import formatCurrency from "@/lib/format-currency";
 
 interface ProductsProps {
     products: Product[];
@@ -24,10 +25,7 @@ export default function Products({ products }: ProductsProps) {
                             {product.description}
                         </p>
                         <p className={"pt-3 text-sm font-semibold"}>
-                            {Intl.NumberFormat("pt-BR", {
-                                style: "currency",
-                                currency: "BRL"
-                            }).format(product.price)}
+                            {formatCurrency(product.price)}
                         </p>
                     </div>
 

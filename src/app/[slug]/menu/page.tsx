@@ -1,6 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug";
+import { getRestaurantData } from "@/data/get-data";
 import RestaurantHeader from "@/components/restaurant-header";
 import Categories from "@/components/categories";
 
@@ -16,7 +16,7 @@ function isConsumptionMethodValid(consumptionMethod: string) {
 export default async function MenuPage({ params, searchParams }: MenuPageProps) {
     const { slug } = await params;
     const { consumptionMethod } = await searchParams;
-    const restaurant = await getRestaurantBySlug(slug);
+    const restaurant = await getRestaurantData(slug);
 
     if (!isConsumptionMethodValid(consumptionMethod)) {
         return notFound();

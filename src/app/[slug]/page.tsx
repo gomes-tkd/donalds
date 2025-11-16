@@ -4,7 +4,7 @@ import TakeAwaySVG from "@/assets/take-away.svg";
 import DineInSVG from "@/assets/dine-in.svg";
 import { notFound } from "next/navigation";
 import OrderMethodOption from "@/components/consumption-method-option";
-import { getRestaurantBySlug } from "@/data/get-restaurant-by-slug";
+import { getRestaurantData } from "@/data/get-data";
 
 interface RestaurantProps {
     params: Promise<{ slug: string }>
@@ -12,7 +12,7 @@ interface RestaurantProps {
 
 export default async function RestaurantPage({ params }: RestaurantProps) {
     const { slug } = await params;
-    const restaurant = await getRestaurantBySlug(slug);
+    const restaurant = await getRestaurantData(slug);
 
     if (!restaurant) {
         return notFound();
