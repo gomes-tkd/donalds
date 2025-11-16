@@ -23,7 +23,7 @@ interface ProductDetailsProps {
 }
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
-    const { toggleCart } = React.useContext(CartContext);
+    const { toggleCart, addProductToCart } = React.useContext(CartContext);
 
     const [quantity, setQuantity] = React.useState<number>(0);
 
@@ -41,6 +41,11 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     }
 
     function handleAddToCart() {
+        addProductToCart({
+            ...product,
+            quantity
+        });
+
         toggleCart();
     }
     return (

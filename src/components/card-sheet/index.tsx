@@ -10,7 +10,7 @@ import {
 import {CartContext} from "@/app/[slug]/menu/context/cart";
 
 export default function CardSheet() {
-    const { isOpen, toggleCart } = React.useContext(CartContext);
+    const { isOpen, toggleCart, products } = React.useContext(CartContext);
 
     return (
         <Sheet open={isOpen} onOpenChange={toggleCart}>
@@ -22,6 +22,9 @@ export default function CardSheet() {
                         asdasda
                     </SheetDescription>
                 </SheetHeader>
+                {products.length > 0 && products.map(product => (
+                    <h1 key={product.id}>{product.name}: {product.quantity}</h1>
+                ))}
             </SheetContent>
         </Sheet>
     );
