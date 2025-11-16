@@ -7,8 +7,6 @@
     <list default="true" id="c89553b1-e2a0-4cbd-8873-fb4b70d490e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[slug]/menu/context/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[slug]/menu/context/cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card-sheet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-sheet/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product-details/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product-details/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1763215617245" duration="1640000" />
       <workItem from="1763217610270" duration="11376000" />
       <workItem from="1763261945705" duration="346000" />
-      <workItem from="1763296303461" duration="11336000" />
+      <workItem from="1763296303461" duration="11533000" />
     </task>
     <servers />
   </component>

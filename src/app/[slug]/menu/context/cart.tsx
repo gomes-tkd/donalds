@@ -32,7 +32,23 @@ export function CardProvider({ children }: { children: React.ReactNode}) {
     }
 
     function addProductToCart(product: CardProduct) {
-        setProducts(prev => [...prev, product]);
+        const isProductAlreadyInCart = products.some(p => p.id === product.id);
+
+        if (!isProductAlreadyInCart) {
+            return setProducts(prev => [...prev, product]);
+        }
+
+        setProducts(prev => {
+            return prev.map(p => {
+                if (p.id === product.id) {
+                    return {
+                        ...p,
+                        quantity: p.quantity + product.quantity
+                    };
+                }
+                return p;
+            });
+        });
     }
 
     return (
