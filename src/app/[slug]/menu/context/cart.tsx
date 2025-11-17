@@ -2,7 +2,7 @@
 import React from "react";
 import { Product } from "@prisma/client";
 
-interface CardProduct
+export interface CardProduct
     extends Pick<Product, "name" | "price" | "id" | "imageUrl">
 {
     name: string;

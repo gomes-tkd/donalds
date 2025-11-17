@@ -2,29 +2,26 @@ import React from "react";
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
-    SheetTrigger
 } from "@/components/ui/sheet";
 import {CartContext} from "@/app/[slug]/menu/context/cart";
+import CartItem from "@/components/car-item";
 
 export default function CardSheet() {
     const { isOpen, toggleCart, products } = React.useContext(CartContext);
 
     return (
         <Sheet open={isOpen} onOpenChange={toggleCart}>
-            <SheetTrigger></SheetTrigger>
-            <SheetContent>
+            <SheetContent className={"w-[80%]"}>
                 <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
-                    <SheetDescription>
-                        asdasda
-                    </SheetDescription>
+                    <SheetTitle>Sacola</SheetTitle>
                 </SheetHeader>
-                {products.length > 0 && products.map(product => (
-                    <h1 key={product.id}>{product.name}: {product.quantity}</h1>
-                ))}
+                <div className={"py-5"}>
+                    {products.length > 0 && products.map(product => (
+                        <CartItem key={product.id} item={product} />
+                    ))}
+                </div>
             </SheetContent>
         </Sheet>
     );
