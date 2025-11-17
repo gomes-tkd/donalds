@@ -7,6 +7,7 @@
     <list default="true" id="c89553b1-e2a0-4cbd-8873-fb4b70d490e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[slug]/menu/context/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[slug]/menu/context/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card-sheet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card-sheet/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart-item/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-item/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -102,7 +106,7 @@
       <workItem from="1763217610270" duration="11376000" />
       <workItem from="1763261945705" duration="346000" />
       <workItem from="1763296303461" duration="11938000" />
-      <workItem from="1763392293385" duration="6221000" />
+      <workItem from="1763392293385" duration="7625000" />
     </task>
     <servers />
   </component>

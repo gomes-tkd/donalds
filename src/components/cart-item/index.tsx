@@ -27,7 +27,7 @@ export default function CartItem({ item }: CartItemProps) {
                         <Button
                             onClick={() => decreaseProductQuantity(item.id)}
                             variant={"outline"}
-                            className={"w-7 h-7 rounded-lg"}
+                            className={"w-7 h-7 rounded-lg cursor-pointer"}
                         >
                             <ChevronLeftIcon />
                         </Button>
@@ -35,7 +35,7 @@ export default function CartItem({ item }: CartItemProps) {
                         <Button
                             onClick={() => increaseProductQuantity(item.id)}
                             variant={"default"}
-                            className={"w-7 h-7 rounded-lg"}
+                            className={"w-7 h-7 rounded-lg cursor-pointer"}
                         >
                             <ChevronRightIcon />
                         </Button>
