@@ -6,7 +6,7 @@ import {
     SheetTitle,
 } from "@/components/ui/sheet";
 import {CartContext} from "@/app/[slug]/menu/context/cart";
-import CartItem from "@/components/car-item";
+import CartItem from "@/components/cart-item";
 
 export default function CardSheet() {
     const { isOpen, toggleCart, products } = React.useContext(CartContext);
@@ -17,11 +17,11 @@ export default function CardSheet() {
                 <SheetHeader>
                     <SheetTitle>Sacola</SheetTitle>
                 </SheetHeader>
-                <div className={"py-5"}>
+                {/*<div className={"py-5"}>*/}
                     {products.length > 0 && products.map(product => (
                         <CartItem key={product.id} item={product} />
                     ))}
-                </div>
+                {/*</div>*/}
             </SheetContent>
         </Sheet>
     );

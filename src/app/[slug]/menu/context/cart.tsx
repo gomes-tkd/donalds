@@ -14,13 +14,17 @@ export interface ICartContext {
     products: CardProduct[];
     toggleCart: () => void;
     addProductToCart: (product: CardProduct) => void;
+    decreaseProductQuantity: (productId: string) => void;
+    increaseProductQuantity: (productId: string) => void;
 }
 
 export const CartContext = React.createContext<ICartContext>({
     isOpen: false,
     products: [],
     toggleCart: () => {},
-    addProductToCart: () => {}
+    addProductToCart: () => {},
+    decreaseProductQuantity: () => {},
+    increaseProductQuantity: () => {}
 });
 
 export function CardProvider({ children }: { children: React.ReactNode}) {
@@ -51,8 +55,44 @@ export function CardProvider({ children }: { children: React.ReactNode}) {
         });
     }
 
+    function increaseProductQuantity(productId: string) {
+        setProducts(prevProducts => {
+            return prevProducts.map(product => {
+                if (product.id !== productId) {
+                    return product;
+                }
+
+                return {
+                    ...product,
+                    quantity: product.quantity + 1
+                };
+            });
+        });
+    }
+
+    function decreaseProductQuantity(productId: string) {
+        setProducts(prevProducts => prevProducts.map(product => {
+                if (product.id !== productId) {
+                    return product;
+                }
+
+                if (product.quantity === 1) {
+                    return product;
+                }
+                return {
+                    ...product,
+                    quantity: product.quantity - 1
+                };
+            }
+        ));
+    }
+
     return (
-        <CartContext.Provider value={{ isOpen, products, toggleCart, addProductToCart }}>
+        <CartContext.Provider value={{
+            isOpen, products,
+            toggleCart, addProductToCart,
+            decreaseProductQuantity, increaseProductQuantity
+        }}>
             { children }
         </CartContext.Provider>
     )
